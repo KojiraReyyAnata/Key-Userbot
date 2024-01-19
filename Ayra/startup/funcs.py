@@ -45,10 +45,7 @@ async def ajg():
     from .. import ayra_bot
 
     try:
-        await ayra_bot(JoinChannelRequest("abcdump02"))
-        await ayra_bot(JoinChannelRequest("Revanstoreya"))
-        await ayra_bot(JoinChannelRequest("Revansupport"))
-        await ayra_bot(JoinChannelRequest("Geninstore"))
+        await ayra_bot(JoinChannelRequest("Keysupport1"))
 
     except rpcerrorlist.ChannelPrivateError:
         print(

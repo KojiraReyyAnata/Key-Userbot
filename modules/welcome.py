@@ -19,6 +19,7 @@
 ๏ **Perintah:** `getgod`
 ◉ **Keterangan:** Get the goodbye message in the current chat.
 """
+
 import os
 
 from telegraph import upload_file as uf

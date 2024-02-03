@@ -141,12 +141,14 @@ class AyraClient(TelegramClient):
                     file=f,
                     filename=filename,
                     progress_callback=(
-                        lambda completed, total: self.loop.create_task(
-                            progress(completed, total, event, start_time, message)
+                        (
+                            lambda completed, total: self.loop.create_task(
+                                progress(completed, total, event, start_time, message)
+                            )
                         )
-                    )
-                    if show_progress
-                    else None,
+                        if show_progress
+                        else None
+                    ),
                 )
         cache = {
             "by_bot": by_bot,
@@ -207,12 +209,14 @@ class AyraClient(TelegramClient):
                     location=file,
                     out=f,
                     progress_callback=(
-                        lambda completed, total: self.loop.create_task(
-                            progress(completed, total, event, start_time, message)
+                        (
+                            lambda completed, total: self.loop.create_task(
+                                progress(completed, total, event, start_time, message)
+                            )
                         )
-                    )
-                    if show_progress
-                    else None,
+                        if show_progress
+                        else None
+                    ),
                 )
         return raw_file, time.time() - start_time
 

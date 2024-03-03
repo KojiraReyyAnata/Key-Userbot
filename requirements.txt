@@ -36,7 +36,7 @@ gitpython
 google-api-python-client
 htmlwebshot
 lottie
-numpy>=1.21.3
+numpy>=1.21.2
 oauth2client
 opencv-python-headless==4.5.5.62
 pillow==8.3.2
